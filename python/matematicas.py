@@ -52,9 +52,9 @@ def suma(numero1, numero2):
     respuesta = input()
     resultadoSuma = primerNumero + segundoNumero
     if int(respuesta) == resultadoSuma:
-        print('¡Felicitaciones! La respuesta es correcta.')
+        input('¡Felicitaciones! La respuesta es correcta.')
     else:
-        print('La respuesta correcta era ' + str(resultadoSuma) + '. Volvé a intentarlo.')
+        input('La respuesta correcta era ' + str(resultadoSuma) + '. Volvé a intentarlo.')
 
 # Función resta
 def resta(numero1, numero2):
@@ -66,9 +66,9 @@ def resta(numero1, numero2):
         print('¿Cuál es el resultado de la resta de', numero2, 'menos ' + str(numero1) + '?')
     respuesta = input()  
     if int(respuesta) == resultadoResta:
-        print('¡Felicitaciones! La respuesta es correcta.')
+        input('¡Felicitaciones! La respuesta es correcta.')
     else:
-        print('La respuesta correcta era ' + str(resultadoResta) + '. Volvé a intentarlo.')
+        input('La respuesta correcta era ' + str(resultadoResta) + '. Volvé a intentarlo.')
 
 # Función para generar números para ordenar
 def ordenarNumeros(cantNumeros, desdeNumero, hastaNumero):
@@ -84,6 +84,7 @@ def ordenarNumeros(cantNumeros, desdeNumero, hastaNumero):
     input('Cuando hayas terminado, presioná Enter para verificar la respuesta.')
     for i in sorted(listaNumeros):
         print(i)
+    input('Presiona Enter para salir')
 
 # Estructura para determinar la operación a realizar
 if int(operacion) == 1:
