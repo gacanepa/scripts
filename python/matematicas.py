@@ -21,7 +21,8 @@
 # HISTORIAL DE REVISIONES
 # FECHA	      VERSIÓN  AUTOR 	         DESCRIPCIÓN
 # ----------  -------  --------------  ------------------
-# 2017-05-13  1.0      Gabriel Cánepa  Versión inicial	
+# 2017-05-13  1.0      Gabriel Cánepa  Versión inicial
+# 2017-05-30  1.1      Gabriel Cánepa  Se agregaron las operaciones de composición y descomposición de números
 
 # Importar librerías
 import random, sys
