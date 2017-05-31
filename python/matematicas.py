@@ -40,6 +40,8 @@ print('Para elegir una operación, ingresá el número correspondiente:')
 print('1 - Suma')
 print('2 - Resta')
 print('3 - Ordenar números de menor a mayor')
+print('4 - Armar números')
+print('5 - Desarmar números')
 operacion = input()
 
 # Números aleatorios para las operaciones de suma y resta
@@ -86,6 +88,29 @@ def ordenarNumeros(cantNumeros, desdeNumero, hastaNumero):
         print(i)
     input('Presiona Enter para salir')
 
+# Función para armar números (recomposición)
+def armarNumero(numero):
+    numeroALista = list(str(numero))
+    print('Vamos a armar el número compuesto por: ')
+    for i in range(1, len(numeroALista)+1):
+        numeroActual = str(numeroALista[i-1])+'0'*(len(numeroALista)-i)
+        print(numeroActual.rjust(len(numeroALista)))
+    print('Ahora ingresá el resultado:')
+    resultado = input()
+    if numero == int(resultado):
+        input('¡Felicitaciones! La respuesta es correcta.')
+    else:
+        input('La respuesta correcta era ' + str(numero) + '. Volvé a intentarlo.')
+
+# Función para desarmar números (descomposición)
+def desarmarNumero(numero):
+    numeroALista = list(str(numero))
+    print('Vamos a descomponer el siguiente número: ' + str(numero))
+    input('Cuando hayas terminado, presioná Enter para verificar la respuesta.')
+    for i in range(1, len(numeroALista)+1):
+        numeroActual = str(numeroALista[i-1])+'0'*(len(numeroALista)-i)
+        print(numeroActual.rjust(len(numeroALista)))
+
 # Estructura para determinar la operación a realizar
 if int(operacion) == 1:
     suma(primerNumero, segundoNumero)
@@ -99,3 +124,9 @@ elif int(operacion) == 3:
     print('¿Hasta qué número?')
     numeroFinal = input()
     ordenarNumeros(cuantosNumeros, numeroInicial, numeroFinal)
+elif int(operacion) == 4:
+    numeroParaArmar = random.randrange(1000, 9999)
+    armarNumero(numeroParaArmar)
+elif int(operacion) == 5:
+    numeroParaDesarmar = random.randrange(1000, 9999)
+    desarmarNumero(numeroParaDesarmar)
